@@ -2,11 +2,26 @@
   color: darkslategrey;
 }
 .list-group-item{
-  color: cornflowerblue;
+  color: black;
   font-weight: bolder;
 }
 .active-l{
-  background-color: blue;
+  background-color: #ffa700;
   color: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+body {
+  background: url(https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/s960x960/116423966_3482929091739652_8565345229829459620_o.jpg?_nc_cat=103&_nc_sid=dd9801&_nc_ohc=l8sEQWCfLKEAX9SaRHD&_nc_ht=scontent-cdt1-1.xx&tp=7&oh=394a90e7d42776ec5fa29b670eac3486&oe=5F947FA7) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+li{
+  opacity: .8;
+}
+h1, p{
+  color: #ffa700;
+  font-weight: bolder;
 }

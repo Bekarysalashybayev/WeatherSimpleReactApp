@@ -6,7 +6,7 @@ import WeatherDisplay from './Components/WeatherDisplay'
 const PLACES = [
     { name: "Almaty", zip: "Almaty,kz" },
     { name: "Astana", zip: "Astana" },
-    { name: "Santa Cruz", zip: "95062" },
+    { name: "Shymkent", zip: "Shymkent" },
     { name: "Honolulu", zip: "96803" }
 ];
 
@@ -24,9 +24,12 @@ class App extends Component {
          <div >
              <nav className="navbar navbar-expand-lg navbar-light bg-light">
                  <div className="container">
-                     <p className="navbar-brand" >React Simple Weather App</p>
+                     <div className="title ">
+                         <p className="navbar-brand" >React Simple Weather App</p>
+                     </div>
                  </div>
              </nav>
+             <br/>
              <br/>
              <br/>
              <div className="container">
@@ -45,7 +48,8 @@ class App extends Component {
                              ))}
                          </ul>
                      </div>
-                     <div className="col-8">
+                     <div className="col-1"></div>
+                     <div className="col-7 weather">
                          <WeatherDisplay
                              key={activePlace}
                              zip={PLACES[activePlace].zip}
