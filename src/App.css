@@ -18,6 +18,9 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+ul {
+  text-align: center;
+}
 li{
   opacity: .8;
 }
