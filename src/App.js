@@ -1,26 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import WeatherDisplay from './Components/WeatherDisplay'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const PLACES = [
+    { name: "Palo Alto", zip: "94303" },
+    { name: "San Jose", zip: "94088" },
+    { name: "Santa Cruz", zip: "95062" },
+    { name: "Honolulu", zip: "96803" }
+];
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activePlace: 0,
+        };
+    }
+
+ render() {
+     const activePlace = this.state.activePlace;
+     return (
+         <div >
+             <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                 <div className="container">
+                     <p className="navbar-brand" >React Simple Weather App</p>
+                 </div>
+             </nav>
+             <br/>
+             <br/>
+             <div className="container">
+                 <div className="row">
+                     <div className="col-4">
+                         <ul className="list-group list-group-flush">
+                             {PLACES.map((place, index) => (
+                                 <li className={index === this.state.activePlace ? 'list-group-item active-l' : 'list-group-item'}
+                                     key={index}
+                                     onClick={() => {
+                                         this.setState({ activePlace: index });
+                                     }}
+                                 >
+                                     {place.name}
+                                 </li>
+                             ))}
+                         </ul>
+                     </div>
+                     <div className="col-8">
+                         <WeatherDisplay
+                             key={activePlace}
+                             zip={PLACES[activePlace].zip}
+                         />
+                     </div>
+                 </div>
+             </div>
+         </div>
+     );
+ }
 }
 
 export default App;
