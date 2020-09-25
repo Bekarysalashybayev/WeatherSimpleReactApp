@@ -4,8 +4,8 @@ import WeatherDisplay from './Components/WeatherDisplay'
 
 
 const PLACES = [
-    { name: "Palo Alto", zip: "94303" },
-    { name: "San Jose", zip: "94088" },
+    { name: "Almaty", zip: "Almaty,kz" },
+    { name: "Astana", zip: "Astana" },
     { name: "Santa Cruz", zip: "95062" },
     { name: "Honolulu", zip: "96803" }
 ];
